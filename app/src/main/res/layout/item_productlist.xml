@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_8sdp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_12sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_product"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/logo"
+            app:civ_border_width="@dimen/_1sdp" />
+
+
+        <TextView
+            android:id="@+id/tv_productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="Nike React "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toTopOf="@+id/tv_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toTopOf="@id/iv_product" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sports Shoes"
+            android:textColor="@color/faded_black"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_productName"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintBottom_toTopOf="@+id/tv_stock" />
+
+
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 left"
+            android:textColor="@color/faded_black"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            app:layout_constraintBottom_toTopOf="@+id/tv_brand" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brand Nike"
+            android:textColor="@color/faded_black"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stock"
+            app:layout_constraintBottom_toTopOf="@+id/tv_stock_status" />
+
+
+        <TextView
+            android:id="@+id/tv_stock_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In stock"
+            android:textColor="@color/faded_black"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand"
+            app:layout_constraintBottom_toTopOf="@+id/tv_price" />
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$240.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_product"
+            app:layout_constraintStart_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stock_status" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
